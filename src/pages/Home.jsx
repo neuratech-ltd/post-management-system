@@ -1,4 +1,5 @@
 import { SquarePen, Trash2, Plus } from "lucide-react";
+import { Link } from "react-router";
 
 const posts = [
   { id: 1, title: "Laravel", author: "The Laravel", category: "Web Development", status: "published", date: "2025-07-19T02:00:00" },
@@ -35,10 +36,11 @@ export default function Home() {
         <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
           <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 bg-gray-50 rounded-t-lg">
             <h2 className="font-medium text-gray-800">All Posts</h2>
-            <button className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md">
+            <Link to="/create-new-post" className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md"
+>
               <Plus size={16} />
               Create New
-            </button>
+            </Link>
           </div>
 
           <div className="p-4 overflow-x-auto">
